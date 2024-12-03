@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <?php>
+        $num1 = 10;
+        $num2 = 20;
+        $sum = $num1 + $num2;
+        echo "The sum of $num1 and $num2 is $sum";
+    </php>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainbow Colors</title>
+    <style>
+        .color-strip {
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <?php
+    // Array of rainbow colors
+    $colors = [
+        "red", "orange", "yellow", "green", "blue", "indigo", "violet"
+    ];
+
+    // Generate color strips
+    foreach ($colors as $color) {
+        echo "<div class='color-strip' style='background-color: $color;'></div>";
+    }
+    ?>
+</body>
+</html>

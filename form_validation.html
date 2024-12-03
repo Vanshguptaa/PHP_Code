@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        form {
+            margin: 0 auto;
+            width: 50%;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        label {
+            flex: 1;
+            margin-right: 10px;
+        }
+        input {
+            flex: 2;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            align-self: flex-start;
+        }
+        .gender-group {
+            display: flex;
+            align-items: center;
+        }
+        .gender-group input {
+            flex: none;
+            margin-left: 10px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <form action="form_validation.php" method="post">
+        <div class="form-group">
+            <label for="fn">First Name: </label>
+            <input type="text" id="fn" name="name" required>
+        </div>
+        <div class="form-group">
+            <label>Gender: </label>
+            <div class="gender-group">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone: </label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
